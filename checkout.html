@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Paiement — AGB Shop</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" style="text-decoration:none;">
+        <div class="logo">AGB</div>
+        <div>
+          <div class="brand-name">AGB Shop</div>
+          <div class="brand-sub">Checkout</div>
+        </div>
+      </a>
+      <div class="actions">
+        <a class="icon-btn" href="index.html" title="Retour">⬅</a>
+        <span class="pill">Total: <b id="checkoutTotal">0 XOF</b></span>
+      </div>
+    </div>
+  </header>
+
+  <main class="section">
+    <div class="container checkout-grid">
+      <section class="checkout-card">
+        <h2 style="margin:0 0 10px;">Informations client</h2>
+
+        <form id="checkoutForm" class="form">
+          <label>Nom complet
+            <input required name="name" placeholder="Ex: Alpha Balde" />
+          </label>
+
+          <label>Téléphone
+            <input required name="phone" placeholder="Ex: +224 ..." />
+          </label>
+
+          <label>Pays
+            <select name="country" required>
+              <option value="Guinée">Guinée</option>
+              <option value="Mali">Mali</option>
+              <option value="Sénégal">Sénégal</option>
+              <option value="Côte d’Ivoire">Côte d’Ivoire</option>
+            </select>
+          </label>
+
+          <label>Adresse / Ville
+            <input required name="address" placeholder="Ex: Conakry, Ratoma..." />
+          </label>
+
+          <label>Mode de paiement
+            <select name="payment" required>
+              <option value="Orange Money">Orange Money</option>
+              <option value="MTN">MTN</option>
+              <option value="Moov">Moov</option>
+              <option value="Visa/Mastercard">Visa / Mastercard</option>
+              <option value="PayPal">PayPal</option>
+              <option value="Cash on Delivery">Paiement à la livraison</option>
+            </select>
+          </label>
+
+          <button class="btn primary" type="submit">Valider la commande (demo)</button>
+        </form>
+      </section>
+
+      <aside class="checkout-card">
+        <h2 style="margin:0 0 10px;">Résumé</h2>
+        <div id="checkoutSummary" style="display:grid;gap:10px;"></div>
+      </aside>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

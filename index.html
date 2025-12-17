@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AGB Shop — Marketplace</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <!-- Top bar -->
+  <div class="topbar">
+    <div class="container topbar-inner">
+      <div class="topbar-left">
+        🇬🇳 🇲🇱 🇸🇳 🇨🇮 <span>Livraison & Mobile Money disponibles</span>
+      </div>
+      <div class="topbar-right">
+        <a href="#">Aide</a>
+        <a href="#">Suivi</a>
+        <a class="pill" href="#">Se connecter</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="container header-inner">
+      <div class="brand">
+        <div class="logo">AGB</div>
+        <div>
+          <div class="brand-name">AGB Shop</div>
+          <div class="brand-sub">Marketplace Afrique de l’Ouest</div>
+        </div>
+      </div>
+
+      <div class="search">
+        <input id="searchInput" type="search" placeholder="Rechercher : iPhone, chaussures, riz, parfum…" />
+        <button id="searchBtn" type="button">Rechercher</button>
+      </div>
+
+      <div class="actions">
+        <button class="icon-btn" type="button" title="Favoris">❤</button>
+
+        <!-- IMPORTANT : bouton panier avec ID + compteur -->
+        <button id="openCart" class="icon-btn" type="button" title="Panier">
+          🛒 <span id="cartCount" class="cart-count">0</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Menu actif (OK) -->
+    <nav class="nav">
+      <div class="container nav-inner">
+        <a class="nav-link active" data-category="all" href="#">Accueil</a>
+        <a class="nav-link" data-category="electronique" href="#">Électronique</a>
+        <a class="nav-link" data-category="mode" href="#">Mode</a>
+        <a class="nav-link" data-category="hygiene" href="#">Hygiène</a>
+        <a class="nav-link" data-category="alimentation" href="#">Alimentation</a>
+        <a class="nav-link" data-category="artisanat" href="#">Artisanat</a>
+        <a class="nav-link" data-category="all" href="#">Devenir vendeur</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container hero-grid">
+      <div class="hero-left">
+        <div class="badge">NOUVEAU • Promotions de lancement</div>
+        <h1>La marketplace simple, fiable et rapide pour acheter & vendre en Afrique de l’Ouest.</h1>
+        <p>
+          AGB Shop connecte les vendeurs locaux et les clients en Guinée, Mali, Sénégal et Côte d’Ivoire.
+          Paiement multicanal (Mobile Money, cartes, PayPal, cash à la livraison).
+        </p>
+        <div class="hero-cta">
+          <a class="btn primary" href="#products">Explorer les produits</a>
+          <a class="btn ghost" href="#">Créer une boutique</a>
+        </div>
+
+        <div class="stats">
+          <div class="stat">
+            <div class="stat-num">7</div>
+            <div class="stat-label">Catégories</div>
+          </div>
+          <div class="stat">
+            <div class="stat-num">24/7</div>
+            <div class="stat-label">Support client</div>
+          </div>
+          <div class="stat">
+            <div class="stat-num">4</div>
+            <div class="stat-label">Pays</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-right">
+        <div class="hero-card">
+          <div class="hero-card-title">Paiements acceptés</div>
+          <div class="chips">
+            <span class="chip">Orange Money</span>
+            <span class="chip">MTN</span>
+            <span class="chip">Moov</span>
+            <span class="chip">Visa</span>
+            <span class="chip">Mastercard</span>
+            <span class="chip">PayPal</span>
+            <span class="chip">Cash on Delivery</span>
+          </div>
+          <div class="hero-card-note">
+            🔒 Sécurité : SSL, anti-fraude, vérification des vendeurs.
+          </div>
+        </div>
+
+        <div class="promo">
+          <div>
+            <div class="promo-title">Livraison & points relais</div>
+            <div class="promo-text">Suivi de commande + notifications</div>
+          </div>
+          <a class="promo-link" href="#">Voir</a>
+        </div>
+
+        <div class="promo">
+          <div>
+            <div class="promo-title">Programme fidélité</div>
+            <div class="promo-text">Réductions & promotions exclusives</div>
+          </div>
+          <a class="promo-link" href="#">Voir</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Categories -->
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <h2>Catégories populaires</h2>
+        <a class="link" href="#products">Voir tout</a>
+      </div>
+
+      <!-- Optionnel: on peut rendre ces cartes cliquables plus tard -->
+      <div class="cat-grid">
+        <a class="cat-card" href="#"><span>📱</span><b>Électronique</b><small>Téléphones, accessoires</small></a>
+        <a class="cat-card" href="#"><span>👕</span><b>Mode</b><small>Hommes, femmes, enfants</small></a>
+        <a class="cat-card" href="#"><span>🧴</span><b>Hygiène</b><small>Parfum, soins</small></a>
+        <a class="cat-card" href="#"><span>🍚</span><b>Alimentation</b><small>Épicerie, local</small></a>
+        <a class="cat-card" href="#"><span>📚</span><b>Fournitures</b><small>École & bureau</small></a>
+        <a class="cat-card" href="#"><span>🎭</span><b>Culture</b><small>Livres, musique</small></a>
+        <a class="cat-card" href="#"><span>🧵</span><b>Artisanat</b><small>Fait main</small></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Products (DYNAMIQUE) -->
+  <section id="products" class="section">
+    <div class="container">
+      <div class="section-head">
+        <h2>Produits en vedette</h2>
+
+        <!-- IMPORTANT : data-filter -->
+        <div class="filters">
+          <button class="filter active" data-filter="all" type="button">Tout</button>
+          <button class="filter" data-filter="best" type="button">Top ventes</button>
+          <button class="filter" data-filter="new" type="button">Nouveautés</button>
+          <button class="filter" data-filter="promo" type="button">Promos</button>
+        </div>
+      </div>
+
+      <!-- IMPORTANT : zone injectée par JS -->
+      <div id="productGrid" class="product-grid"></div>
+
+      <p id="emptyState" class="empty" style="display:none;">
+        Aucun produit ne correspond à votre recherche.
+      </p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div>
+        <div class="footer-title">AGB Shop</div>
+        <p class="footer-text">
+          Marketplace généraliste : valoriser les marques locales et faciliter le commerce digital en CEDEAO.
+        </p>
+      </div>
+
+      <div>
+        <div class="footer-title">Liens</div>
+        <a class="footer-link" href="#">À propos</a>
+        <a class="footer-link" href="#">Devenir vendeur</a>
+        <a class="footer-link" href="#">Support</a>
+      </div>
+
+      <div>
+        <div class="footer-title">Sécurité</div>
+        <a class="footer-link" href="#">Politique de confidentialité</a>
+        <a class="footer-link" href="#">Conditions</a>
+        <a class="footer-link" href="#">Signalement fraude</a>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <span>© <span id="y"></span> AGB Shop</span>
+      <span class="muted">Paiements: Mobile Money • Cartes • PayPal • Cash</span>
+    </div>
+  </footer>
+
+  <!-- Drawer panier (nécessaire pour openCart/closeCart si ton JS le gère) -->
+  <div id="overlay" class="overlay"></div>
+  <aside id="cartDrawer" class="cart-drawer">
+    <div class="cart-head">
+      <b>Votre panier</b>
+      <button id="closeCart" class="close-btn">✕</button>
+    </div>
+    <div id="cartDrawerList" class="cart-list"></div>
+    <div class="cart-footer">
+      <div class="cart-total">
+        <span>Total</span>
+        <b id="cartTotal">0 XOF</b>
+      </div>
+      <button id="checkoutBtn" class="btn primary" type="button">Commander (demo)</button>
+    </div>
+  </aside>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
+  <script src="script.js"></script>
+</body>
+</html>

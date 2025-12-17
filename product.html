@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Détails produit — AGB Shop</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" style="text-decoration:none;">
+        <div class="logo">AGB</div>
+        <div>
+          <div class="brand-name">AGB Shop</div>
+          <div class="brand-sub">Détails produit</div>
+        </div>
+      </a>
+      <div class="actions">
+        <a class="icon-btn" href="index.html" title="Retour">⬅</a>
+        <button id="openCart" class="icon-btn" type="button" title="Panier">
+          🛒 <span id="cartCount" class="cart-count">0</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main class="section">
+    <div class="container">
+      <div id="productDetail" class="detail-card"></div>
+      <p id="notFound" style="display:none;color:var(--muted);">Produit introuvable.</p>
+    </div>
+  </main>
+
+  <!-- Drawer panier -->
+  <div id="overlay" class="overlay"></div>
+  <aside id="cartDrawer" class="cart-drawer">
+    <div class="cart-head">
+      <b>Votre panier</b>
+      <button id="closeCart" class="close-btn">✕</button>
+    </div>
+    <div id="cartDrawerList" class="cart-list"></div>
+    <div class="cart-footer">
+      <div class="cart-total">
+        <span>Total</span>
+        <b id="cartTotal">0 XOF</b>
+      </div>
+      <a class="btn primary" href="checkout.html">Passer au paiement</a>
+    </div>
+  </aside>
+
+  <script src="script.js"></script>
+</body>
+</html>
